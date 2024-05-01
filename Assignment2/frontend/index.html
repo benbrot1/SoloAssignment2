@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Brotman</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="resources/newlogo.png" alt="logo" class="logo">
+    <div>
+        <h1>IST 256 Discussion Blog</h1>
+        <h4>Sign in to create a new blog post, or leave a like and comment on other posts!</h4>
+    </div>
+</header>
+
+<div class="content">
+
+    <div class="sidebar">
+        <!--two divs: login form, create new blog form. toggle styles based off of boolean login
+         so blog form is only displayed when logged in -->
+        <div id="loginFormContainer">
+            <h3>Login</h3>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <br>
+            <div id="validation"></div>
+        </div>
+
+        <div id="blogForm">
+            <div id="blogFormContainer" style="display:none">
+                <div id="userGreeting"></div>
+                <h3>Create a New Blog Post</h3>
+                <form id="blogPostForm">
+                    <div class="form-group">
+                        <label for="postTitle">Title</label>
+                        <input type="text" class="form-control" id="postTitle" name="postTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postContent">Content</label>
+                        <textarea class="form-control" id="postContent" name="postContent" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Post</button>
+                </form>
+                <br>
+                <div id="postValidation"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="displayedPage">
+        <h1>Latest Blog Posts</h1>
+        <div id="blogPosts"></div>
+    </div>
+
+
+</div>
+
+
+<footer>
+    <a href="www.linkedin.com/in/benjamin-brotman-7b826a253">LinkedIn</a>
+    <a href="https://github.com/benbrot1"> GitHub</a>
+    <p>Benjamin Brotman <br> 118 University Drive Apt 11, State College, PA 16801 <br> (571)-235-1685 <br>bsb5442@psu.edu </p>
+    <p>&copy; Copyright 2024</p>
+    <br>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
